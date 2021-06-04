@@ -1,0 +1,295 @@
+{
+	"id": 0,
+	"name": "cicd",
+	"kind": 0,
+	"kindString": "Project",
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "default",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 2,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 3,
+							"name": "new default",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 4,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 1,
+								"name": "default"
+							},
+							"overwrites": {
+								"type": "reference",
+								"name": "BaseComponent.constructor"
+							}
+						}
+					],
+					"overwrites": {
+						"type": "reference",
+						"name": "BaseComponent.constructor"
+					}
+				},
+				{
+					"id": 8,
+					"name": "client",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isProtected": true
+					},
+					"sources": [
+						{
+							"fileName": "common/base.ts",
+							"line": 9,
+							"character": 20
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "BaseComponent.client"
+					}
+				},
+				{
+					"id": 9,
+					"name": "inputs",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isProtected": true
+					},
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "BaseComponent.inputs"
+					}
+				},
+				{
+					"id": 12,
+					"name": "__doc",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "common/base.ts",
+							"line": 34,
+							"character": 9
+						}
+					],
+					"signatures": [
+						{
+							"id": 13,
+							"name": "__doc",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 14,
+									"name": "projectName",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "BaseComponent.__doc"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "BaseComponent.__doc"
+					}
+				},
+				{
+					"id": 10,
+					"name": "__getBasePath",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "common/base.ts",
+							"line": 21,
+							"character": 17
+						}
+					],
+					"signatures": [
+						{
+							"id": 11,
+							"name": "__getBasePath",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "BaseComponent.__getBasePath"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "BaseComponent.__getBasePath"
+					}
+				},
+				{
+					"id": 5,
+					"name": "github",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 25,
+							"character": 23
+						}
+					],
+					"signatures": [
+						{
+							"id": 6,
+							"name": "github",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "创建Github Action模板",
+								"returns": "\n"
+							},
+							"parameters": [
+								{
+									"id": 7,
+									"name": "inputs",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {},
+									"type": {
+										"type": "reference",
+										"name": "InputProps"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						2
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						8,
+						9
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						12,
+						10,
+						5
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 15,
+					"character": 34
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"name": "BaseComponent"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Classes",
+			"kind": 128,
+			"children": [
+				1
+			]
+		}
+	],
+	"sources": [
+		{
+			"fileName": "index.ts",
+			"line": 1,
+			"character": 0
+		}
+	]
+}

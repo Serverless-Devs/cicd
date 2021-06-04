@@ -1,0 +1,10 @@
+Type: Component
+Name: cicd
+Provider:
+  - 其它
+Version: 0.0.1
+Description: Serverless Devs CI/CD 组件
+HomePage: https://www.serverless-devs.com
+Tags: #标签详情
+  - 模板
+Category: 其它
