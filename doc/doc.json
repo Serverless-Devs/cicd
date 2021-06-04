@@ -56,7 +56,7 @@
 					}
 				},
 				{
-					"id": 8,
+					"id": 11,
 					"name": "client",
 					"kind": 1024,
 					"kindString": "Property",
@@ -80,7 +80,7 @@
 					}
 				},
 				{
-					"id": 9,
+					"id": 12,
 					"name": "inputs",
 					"kind": 1024,
 					"kindString": "Property",
@@ -97,7 +97,7 @@
 					}
 				},
 				{
-					"id": 12,
+					"id": 15,
 					"name": "__doc",
 					"kind": 2048,
 					"kindString": "Method",
@@ -111,14 +111,14 @@
 					],
 					"signatures": [
 						{
-							"id": 13,
+							"id": 16,
 							"name": "__doc",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 14,
+									"id": 17,
 									"name": "projectName",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -147,7 +147,7 @@
 					}
 				},
 				{
-					"id": 10,
+					"id": 13,
 					"name": "__getBasePath",
 					"kind": 2048,
 					"kindString": "Method",
@@ -161,7 +161,7 @@
 					],
 					"signatures": [
 						{
-							"id": 11,
+							"id": 14,
 							"name": "__getBasePath",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -182,7 +182,7 @@
 					}
 				},
 				{
-					"id": 5,
+					"id": 8,
 					"name": "github",
 					"kind": 2048,
 					"kindString": "Method",
@@ -192,19 +192,72 @@
 					"sources": [
 						{
 							"fileName": "index.ts",
-							"line": 25,
+							"line": 47,
 							"character": 23
 						}
 					],
 					"signatures": [
 						{
-							"id": 6,
+							"id": 9,
 							"name": "github",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
 								"shortText": "创建Github Action模板",
+								"returns": "\n"
+							},
+							"parameters": [
+								{
+									"id": 10,
+									"name": "inputs",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {},
+									"type": {
+										"type": "reference",
+										"name": "InputProps"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				},
+				{
+					"id": 5,
+					"name": "index",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 26,
+							"character": 22
+						}
+					],
+					"signatures": [
+						{
+							"id": 6,
+							"name": "index",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "交互式获取CI/CD解决方案（默认方法）",
 								"returns": "\n"
 							},
 							"parameters": [
@@ -247,16 +300,17 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						8,
-						9
+						11,
+						12
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						12,
-						10,
+						15,
+						13,
+						8,
 						5
 					]
 				}
@@ -264,7 +318,7 @@
 			"sources": [
 				{
 					"fileName": "index.ts",
-					"line": 15,
+					"line": 16,
 					"character": 34
 				}
 			],

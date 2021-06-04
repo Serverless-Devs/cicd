@@ -2,6 +2,7 @@ import BaseComponent from './common/base';
 import logger from './common/logger';
 import fse from 'fs-extra';
 import path from 'path';
+import inquirer from 'inquirer';
 import {InputProps} from './common/entity';
 
 const {
@@ -15,6 +16,27 @@ logger.setContent("CICD")
 export default class ComponentDemo extends BaseComponent {
     constructor(props) {
         super(props)
+    }
+
+    /**
+     * 交互式获取CI/CD解决方案（默认方法）
+     * @param inputs
+     * @returns
+     */
+    public async index(inputs: InputProps) {
+        const cicdPlatform: any = await inquirer.prompt([{
+            type: 'list',
+            name: 'platform',
+            'message': '选择对应的CI/CD工具方案',
+            choices: [{name: 'github', value: 'github'},]
+        }]);
+        switch (cicdPlatform.platform) {
+            case 'github':
+                await this.github(inputs);
+                break;
+            default:
+                break;
+        }
     }
 
     /**
