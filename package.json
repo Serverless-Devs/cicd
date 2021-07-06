@@ -1,6 +1,6 @@
 {
   "name": "cicd",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Serverless Devs CI/CD 组件",
   "keywords": [
     "Serverless",

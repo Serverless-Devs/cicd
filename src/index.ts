@@ -89,9 +89,9 @@ export default class ComponentDemo extends BaseComponent {
         2. 返回数据
         */
 
-        await fse.mkdirs('./.github/workflow/');
+        await fse.mkdirs('./.github/workflows/');
         const templateData = await fse.readFileSync(path.join(__dirname, '../', 'src/template/github/action/serverless-devs.yml'))
-        await fse.writeFileSync('./.github/workflow/serverless-devs.yml', templateData);
+        await fse.writeFileSync('./.github/workflows/serverless-devs.yml', templateData);
 
         logger.info(`
         
