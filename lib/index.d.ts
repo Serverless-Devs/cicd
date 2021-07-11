@@ -14,4 +14,10 @@ export default class ComponentDemo extends BaseComponent {
      * @returns
      */
     github(inputs: InputProps): Promise<void>;
+    /**
+     * 创建Gitee Go模板
+     * @param inputs
+     * @returns
+     */
+    gitee(inputs: InputProps): Promise<void>;
 }

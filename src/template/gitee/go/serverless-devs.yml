@@ -1,0 +1,26 @@
+name: ServerlessDevs                       # 流水线名称
+displayName: 'ServerlessDevs自动部署流水线'   # 流水线描述
+triggers:                                  # 流水线触发器配置
+  push:                                    # 设置 master 分支 在产生代码 push 时精确触发（PRECISE）构建
+    - matchType: PRECISE
+      branch: master
+commitMessage: ''                          # 通过匹配当前提交的 CommitMessage 决定是否执行流水线
+stages:                                    # 构建阶段配置
+  - stage:                                 # 定义一个 ID 标识为 deploy-stage ,名为「 Deploy Stage 」的阶段
+      name: deploy-stage
+      displayName: 'Deploy Stage'
+      failFast: false                      # 允许快速失败，即当 Stage 中有任务失败时，直接结束整个 Stage
+
+      steps:                               # 构建步骤配置
+        - step: npmbuild@1                 # 采用 npm 编译环境
+          name: deploy-step                # 定义一个 ID 标识为 deploy-step ,名为「 Deploy Step 」的阶段
+          displayName: 'Deploy Step'
+          inputs:                          # 构建输入参数设定
+            nodeVersion: 14.15             # 指定 node 环境版本为 14.15
+            goals: |                       # 安装依赖，配置相关主题、部署参数并发布部署
+              node -v
+              npm -v
+              npm install -g @serverless-devs/s
+              s config add --AccountID $AccountID --AccessKeyID $AccessKeyID --AccessKeySecret $AccessKeySecret -a default
+#              s cli fc-api updateFunction --region cn-hangzhou --serviceName koademo --functionName http-trigger-function --code '{"zipFile":"./src/"}'
+#              s cli fc-api publishVersion --region cn-hangzhou --serviceName koademo
