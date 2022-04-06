@@ -1,16 +1,17 @@
 import logger from './common/logger';
-import fse from 'fs-extra';
 import path from 'path';
-import inquirer from 'inquirer';
 import {InputProps} from './common/entity';
 
 const {
     help,
+    fse,
+    inquirer,
     commandParse,
 } = require('@serverless-devs/core')
 
 logger.setContent("CICD")
 
+const templateDir = path.join(__dirname, '../', 'template');
 export default class CiCdComponent {
     /**
      * 交互式获取CI/CD解决方案（默认方法）
@@ -95,7 +96,7 @@ export default class CiCdComponent {
         */
 
         await fse.mkdirs('./.github/workflows/');
-        const templateData = await fse.readFileSync(path.join(__dirname, '../', 'src/template/github/action/serverless-devs.yml'))
+        const templateData = await fse.readFileSync(path.join(templateDir, 'github/action/serverless-devs.yml'))
         await fse.writeFileSync('./.github/workflows/serverless-devs.yml', templateData);
 
         logger.info(`
@@ -159,7 +160,7 @@ export default class CiCdComponent {
         */
 
         await fse.mkdirs('./.workflow/');
-        const templateData = await fse.readFileSync(path.join(__dirname, '../', 'src/template/gitee/go/serverless-devs.yml'))
+        const templateData = await fse.readFileSync(path.join(templateDir, 'gitee/go/serverless-devs.yml'))
         await fse.writeFileSync('./.workflow/serverless-devs.yml', templateData);
 
         logger.info(`

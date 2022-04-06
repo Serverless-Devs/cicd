@@ -5,3 +5,7 @@ LICENSE
 package-lok.json
 .prettierrc.js
 .gitignore
+src
+lib
+readme.md
+Design-Documentation.md
