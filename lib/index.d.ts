@@ -1,7 +1,5 @@
-import BaseComponent from './common/base';
 import { InputProps } from './common/entity';
-export default class ComponentDemo extends BaseComponent {
-    constructor(props: any);
+export default class CiCdComponent {
     /**
      * 交互式获取CI/CD解决方案（默认方法）
      * @param inputs

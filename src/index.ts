@@ -1,4 +1,3 @@
-import BaseComponent from './common/base';
 import logger from './common/logger';
 import fse from 'fs-extra';
 import path from 'path';
@@ -8,16 +7,11 @@ import {InputProps} from './common/entity';
 const {
     help,
     commandParse,
-    reportComponent
 } = require('@serverless-devs/core')
 
 logger.setContent("CICD")
 
-export default class ComponentDemo extends BaseComponent {
-    constructor(props) {
-        super(props)
-    }
-
+export default class CiCdComponent {
     /**
      * 交互式获取CI/CD解决方案（默认方法）
      * @param inputs
@@ -48,10 +42,6 @@ export default class ComponentDemo extends BaseComponent {
      * @returns
      */
     public async github(inputs: InputProps) {
-        reportComponent('cicd', {
-            command: 'github',
-            uid: '',
-        });
         const apts = {
             boolean: ['help'],
             alias: {help: 'h'},
@@ -132,10 +122,6 @@ export default class ComponentDemo extends BaseComponent {
      * @returns
      */
     public async gitee(inputs: InputProps) {
-        reportComponent('cicd', {
-            command: 'gitee',
-            uid: '',
-        });
         const apts = {
             boolean: ['help'],
             alias: {help: 'h'},

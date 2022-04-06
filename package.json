@@ -23,11 +23,9 @@
   },
   "scripts": {
     "start": "npm run watch",
-    "watch": "npm run doc && tsc -w",
+    "watch": "tsc -w",
     "publish": "npm run build && s cli platform publish",
-    "build": "tsc",
-    "postbuild": "npm run doc",
-    "doc": "npx typedoc src/index.ts --json doc/doc.json --out doc"
+    "build": "tsc"
   },
   "dependencies": {
     "@serverless-devs/core": "^0.0.*",
